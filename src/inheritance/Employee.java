@@ -90,6 +90,7 @@ public class Employee extends Person {
         return id == employee.id &&
         Double.compare(employee.salary, salary) == 0 &&
         Objects.equals(getName(), employee.getName()) &&
-        Objects.equals(department, employee.department);
+        Objects.equals(department, employee.department) &&
+        Objects.equals(startDate, employee.startDate);
     }
 }
