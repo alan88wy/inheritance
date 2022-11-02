@@ -3,10 +3,10 @@ package inheritance;
 import java.time.LocalDate;
 import java.util.Objects;
 
-public class Employee {
+public class Employee extends Person {
     private static int nextId = 0;
     private int id;
-    private String name;
+//    private String name;
     private double salary;
     private String department;
     private LocalDate startDate;
@@ -20,15 +20,16 @@ public class Employee {
     }
 
     public Employee() {
-        // Do not need to do the following since we have the initialization block below
-        // this.id = this.getNextId();
-        // this.salary = 0.00;
-        // this.startDate = LocalDate.now();
+//         Do not need to do the following since we have the initialization block below
+//         this.id = this.getNextId();
+//         this.salary = 0.00;
+//         this.startDate = LocalDate.now();
+//    	super();
     }
 
     public Employee(String name, double salary, String department, LocalDate startDate) {
         // this.id = this.getNextId();
-        this.name = name;
+        super(name);
         this.salary = salary;
         this.department = department;
         this.startDate = startDate;
@@ -44,12 +45,12 @@ public class Employee {
     public void setId(int id) {
         this.id = id;
     }
-    public String getName() {
-        return name;
-    }
-    public void setName(String name) {
-        this.name = name;
-    }
+//    public String getName() {
+//        return name;
+//    }
+//    public void setName(String name) {
+//        this.name = name;
+//    }
     public double getSalary() {
         return salary;
     }
@@ -75,7 +76,7 @@ public class Employee {
     public String toString() {
         return "Employee{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
+                ", name='" + getName() + '\'' +
                 ", salary=" + salary +
                 ", department='" + department + '\'' +
                 ", startDate=" + startDate +
@@ -88,7 +89,7 @@ public class Employee {
         Employee employee = (Employee) o;
         return id == employee.id &&
         Double.compare(employee.salary, salary) == 0 &&
-        Objects.equals(name, employee.name) &&
+        Objects.equals(getName(), employee.getName()) &&
         Objects.equals(department, employee.department);
     }
 }
