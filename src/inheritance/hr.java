@@ -31,6 +31,12 @@ public class hr {
         boss.setBonus(5000);
 
         System.out.println("Boss : " + boss.toString());
+        
+        Integer x = 10;
+        
+
+        
+        
     }
 
 }
