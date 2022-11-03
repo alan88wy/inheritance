@@ -32,10 +32,6 @@ public class hr {
 
         System.out.println("Boss : " + boss.toString());
         
-        Integer x = 10;
-        
-
-        
         
     }
 
