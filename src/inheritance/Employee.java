@@ -3,7 +3,7 @@ package inheritance;
 import java.time.LocalDate;
 import java.util.Objects;
 
-public class Employee extends Person {
+public class Employee extends Person implements Comparable<Employee>{
     private static int nextId = 0;
     private int id;
 //    private String name;
@@ -92,5 +92,9 @@ public class Employee extends Person {
         Objects.equals(getName(), employee.getName()) &&
         Objects.equals(department, employee.department) &&
         Objects.equals(startDate, employee.startDate);
+    }
+    
+    public int compareTo(Employee other) {
+    	return Double.compare(salary, other.salary);
     }
 }
