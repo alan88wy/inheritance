@@ -2,6 +2,6 @@ package inheritance;
 
 public interface Comparable<T>
 {
-	int compareTo(T other);
+	int compareTo(T other);  // Abstract Method
 
 }

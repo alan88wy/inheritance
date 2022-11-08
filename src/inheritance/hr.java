@@ -3,8 +3,8 @@ import java.time.LocalDate;
 
 public class hr {
 	public static void main(String[] args) {
-        Employee a = new Employee("a", 1000.0, "MI6", LocalDate.now());
-        Employee b = new Employee("b", 1000.0, "MI6", LocalDate.now());
+        Employee a = new Employee("J", 1000.0, "MI6", LocalDate.now());
+        Employee b = new Employee("M", 1000.0, "MI6", LocalDate.now());
 
         System.out.println("A : " + a.toString());
         System.out.println("B : " + b.toString());
